@@ -23,28 +23,31 @@ const HowItWorks = () => {
         <>
             <section className="section mb-4">
                 <div className="container">
-                    <div className="alert alert-primary d-flex justify-content-between">
+                    <div className={`alert alert-primary d-flex justify-content-between ${changeTitle}`}>
                         <h1 className="mb-0">useState </h1>
-                        <Button className="mw-100" onClick={changeCardDetails} variant="success">{changeTitle}</Button>
+                        <Button className={`mw-100 ${changeTitle}`} onClick={changeCardDetails} variant="success">{changeTitle}</Button>
                     </div>
                 </div>
             </section>
 
-            <section className="section">
-                <div className="container">
-                    <GetDataInArray />
-                    
-                    <hr />
-                </div>
-            </section>
+            <div className={`middle-area-opt-dv ${changeTitle}`}>
+                <section className="section">
+                    <div className="container">
+                        <GetDataInArray />
+                        
+                        <hr />
+                    </div>
+                </section>
 
-            <section className="section">
-                <div className="container">
-                    <GetDataInObject />
+                <section className="section">
+                    <div className="container">
+                        <GetDataInObject />
 
-                    
-                </div>
-            </section>
+                        
+                    </div>
+                </section>
+            </div>
+
         </>
     );
 };

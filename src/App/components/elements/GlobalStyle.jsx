@@ -85,4 +85,65 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         line-height: 1.5;
     }
+
+    .card-root-array .btn-remove {
+        position: absolute;
+        top: -15px;
+        right: -23px;
+        border-radius: 100%;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        transform: translate(-12px, 12px);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .card-root-array .card:hover .btn-remove {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    /*.alert {
+        &.OFF {
+            --bs-alert-color: #41464b;
+            --bs-alert-bg: #e2e3e5;
+            --bs-alert-border-color: #d3d6d8;
+        }
+    }*/
+
+    .alert-view-div {
+        color: #000;
+        background: #fafafa;
+        border-radius: 30px;
+        transition: all 0.8s ease-in-out;
+        margin-bottom: 1.5rem;
+        min-height: 290px;
+        padding-top: 24px;
+
+        p {
+            font-size: 30px;
+            line-height: 1.5;
+            font-weight: 600;
+            margin: 0 0 10px;
+            font-family: 'Manrope',sans-serif;
+        }
+
+        .img-fluid {
+            height: 185px;
+            object-fit: contain;
+            padding: 20px 0;
+        }
+    }
+
+    .middle-area-opt-dv {
+        &.OFF {
+            opacity: 0.4;
+            pointer-events: none;
+            position: relative;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
 `;
