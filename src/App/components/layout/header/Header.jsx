@@ -28,7 +28,7 @@ const Header = () => {
           <Navbar expand="lg">
             <div className="logo-div">
               <Navbar.Brand as={NavLink} to="/Home">
-                <img src={Logo} className="img-fluid" />
+                <img src={Logo} className="img-fluid" loading="lazy" />
               </Navbar.Brand>
             </div>
 

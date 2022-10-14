@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import styled from "styled-components";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 //Img
 import BannerImg01 from "../../assets/images/1.jpg";
@@ -98,10 +99,10 @@ const HeroSlider = () => {
                                     modules={[Pagination, Navigation]}
                                     className="mySwiper"
                                 >
-                                    <SwiperSlide> <img src={BannerImg01} alt="img" className="img-fluid img-banner" /> </SwiperSlide>
-                                    <SwiperSlide> <img src={BannerImg02} alt="img" className="img-fluid img-banner" /> </SwiperSlide>
-                                    <SwiperSlide> <img src={BannerImg03} alt="img" className="img-fluid img-banner" /> </SwiperSlide>
-                                    <SwiperSlide> <img src={BannerImg04} alt="img" className="img-fluid img-banner" /> </SwiperSlide>
+                                    <SwiperSlide> <LazyLoadImage src={BannerImg01} alt="img" className="img-fluid img-banner" effect="blur" loading="lazy" /> </SwiperSlide>
+                                    <SwiperSlide> <LazyLoadImage src={BannerImg02} alt="img" className="img-fluid img-banner" effect="blur" loading="lazy" /> </SwiperSlide>
+                                    <SwiperSlide> <LazyLoadImage src={BannerImg03} alt="img" className="img-fluid img-banner" effect="blur" loading="lazy" /> </SwiperSlide>
+                                    <SwiperSlide> <LazyLoadImage src={BannerImg04} alt="img" className="img-fluid img-banner" effect="blur" loading="lazy" /> </SwiperSlide>
                                 </Swiper>
                             </SwiperSlider>
                         </Col>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const BannerBox = styled.section`
     font-family: 'Manrope', sans-serif;
@@ -70,7 +71,20 @@ const BannerSection = (props) => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-8 col-lg-5 d-flex position-relative mx-auto">
-                            <div className="img-mask mask-1"><img src={props.bannerImg} alt="" /></div>
+                            <div className="img-mask mask-1">
+                                {/* <img src={props.bannerImg} loading="lazy" alt="" /> */}
+                                <LazyLoadImage 
+                                src={props.bannerImg} 
+                                effect="blur" 
+                                loading="lazy" 
+                                beforeLoad={() => {
+                                    console.log("Before Load");
+                                }}
+                                afterLoad={() => {
+                                    console.log("After Load");
+                                }}
+                                />
+                            </div>
                         </div>
 
                         <div className="col-lg-6 offset-lg-1">

@@ -146,4 +146,17 @@ export const GlobalStyle = createGlobalStyle`
             user-select: none;
         }
     }
+
+    /* clamp styles */
+    .clamp-lines > span {
+        display: block;
+    }
+
+    .clamp-lines__button {
+        background: none;
+        border: 0;
+        color: red;
+        cursor: pointer;
+        padding: 5px 0 0;
+    }
 `;

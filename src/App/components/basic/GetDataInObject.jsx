@@ -16,17 +16,19 @@ const GetDataInObject = () => {
         setCardListObject({...cardListObject, cardTitle:"Object Card Updated."});
     }
 
+    // {console.log([newEntry])}
+
     return (
         <>
             <Row className="mt-4 mb-2 justify-content-center">
-                <Col lg={4} md={6} key={cardListObject.id}>
+                <Col lg={6} md={6} key={cardListObject.id}>
                     <Card className="w-100 mb-4">
                         <Card.Body>
                             <Card.Title>{cardListObject.cardTitle}</Card.Title>
                             <Card.Text>{cardListObject.cardDesc}</Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            {/* <Button onClick={() => setModalShow(true)} variant="primary" className="me-2"> Update Data </Button> */}
+                            <Button onClick={() => setModalShow(true)} variant="primary" className="me-2"> Update Data </Button>
                             <Button onClick={StaticDataObject} className="me-2">Update Static Data</Button>
                             <Button onClick={() => setOpen(!open)} aria-expanded={open}> Open Code </Button>
                         </Card.Footer>
@@ -44,7 +46,7 @@ const GetDataInObject = () => {
                     <Row className="justify-content-center">
                         <Col md={12}>
                             <div className="w-100 img-div">
-                                <img className="img-fluid" src={"./images/Code/object01.png"} />
+                                <img className="img-fluid" src={"./images/Code/object01.png"} loading="lazy" />
                             </div>
                         </Col>
                     </Row>

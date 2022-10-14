@@ -61,7 +61,7 @@ const GetDataInArray = () => {
             <Row className="justify-content-center card-root-array d-none" id="NoDataID">
                 <Col>
                     <div className="alert alert-danger alert-view-div text-center">
-                        <div> <img src="./images/no-results-found.png" alt="no data" className="img-fluid" /> </div>
+                        <div> <img src="./images/no-results-found.png" alt="no data" className="img-fluid" loading="lazy" /> </div>
                         <p>No Data Found</p>
                     </div>
                 </Col>
