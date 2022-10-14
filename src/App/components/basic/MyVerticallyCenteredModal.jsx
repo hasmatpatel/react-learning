@@ -12,16 +12,20 @@ function MyVerticallyCenteredModal(props) {
     const submitForm = (e) => {
         e.preventDefault();
 
-        const newEntry = {
-            id: allEntry.length,
-            title: title,
-            messages: messages,
-        };
-
-        setAllEntry([...allEntry, newEntry]);
-
-        setTitle('');
-        setMessages('');
+        if(title && messages) {
+            const newEntry = {
+                id: allEntry.length,
+                title: title,
+                messages: messages,
+            };
+    
+            setAllEntry([...allEntry, newEntry]);
+    
+            setTitle('');
+            setMessages('');
+        } else {
+            alert("Please fill the fields.");
+        }
     }
 
     return (
@@ -59,13 +63,14 @@ function MyVerticallyCenteredModal(props) {
             <div className="row" >
                 {
                     allEntry.map((currentElement) => {
+                        const {id, title, messages} = currentElement;
                         return (
-                            <div className="col-md-3" key={currentElement.id}>
+                            <div className="col-md-3" key={id}>
                                 <div className="card card-success mb-3">
                                     <div className="card-body">
-                                        <h3>{currentElement.title}</h3>
+                                        <h3>{title}</h3>
                                         <ClampLines
-                                            text={currentElement.messages}
+                                            text={messages}
                                             id="custom01"
                                             lines={2}
                                             moreText="Read More"
