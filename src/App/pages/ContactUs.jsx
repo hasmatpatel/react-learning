@@ -1,3 +1,5 @@
+import ContactForm from "../components/basic/ContactForm";
+
 const ContactUs = () => {
     return (
         <>
@@ -8,6 +10,8 @@ const ContactUs = () => {
                     </div>
                 </div>
             </section>
+
+            <ContactForm />
         </>
     );
 };

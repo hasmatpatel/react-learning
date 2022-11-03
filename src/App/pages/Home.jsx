@@ -1,5 +1,6 @@
 import React from 'react'
 import BannerSection from '../components/sections/BannerSection';
+import ListSection from '../components/sections/ListSection';
 // import HeroSlider from "../components/sections/HeroSlider";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     return (
         <>
             <BannerSection className="homeBanner" {...data} />
+            <ListSection />
             {/* <HeroSlider /> */}
         </>
     );

@@ -10,9 +10,9 @@ function MyVerticallyCenteredModal(props) {
     const [allEntry, setAllEntry] = useState([]);
 
     const submitForm = (e) => {
-        e.preventDefault();
-
         if(title && messages) {
+            e.preventDefault();
+            
             const newEntry = {
                 id: allEntry.length,
                 title: title,
@@ -20,16 +20,19 @@ function MyVerticallyCenteredModal(props) {
             };
     
             setAllEntry([...allEntry, newEntry]);
-    
+
             setTitle('');
             setMessages('');
+
+            props.onHide();
         } else {
+            e.preventDefault();
             alert("Please fill the fields.");
         }
     }
-
+    
     return (
-        <>
+        <div>
             <Modal
                 {...props}
                 size="md"
@@ -53,7 +56,7 @@ function MyVerticallyCenteredModal(props) {
                         </Form.Group>
                         <Modal.Footer className="p-0 pt-3">
                             {/* <Button variant="danger" className="mx-2" onClick={props.onHide}>Close</Button> */}
-                            <Button variant="primary" className="mx-0" type="submit" onClick={props.onHide}>Update Data</Button>
+                            <Button variant="primary" className="mx-0" type="submit" >Update Data</Button>
                         </Modal.Footer>
                     </Form>
                 </Modal.Body>
@@ -85,7 +88,7 @@ function MyVerticallyCenteredModal(props) {
                     )
                 }
             </div>
-        </>
+        </div>
     );
 }
 
